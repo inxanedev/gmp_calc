@@ -35,7 +35,7 @@ class Calculator {
                     mpf_pow_ui(value, value, std::stoul(command.argument.c_str())); 
                     break;
                 case command_parser::Operation::PRECISION:
-                    mpf_set_default_prec(std::stoul(command.argument.c_str()));
+                    mpf_set_prec(value, std::stoul(command.argument.c_str()));
                     break;
                 case command_parser::Operation::ABS:
                     mpf_abs(value, value);
