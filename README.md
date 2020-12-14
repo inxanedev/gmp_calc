@@ -10,3 +10,4 @@ GMP based calculator made in C++ for linux
 -   abs  => absolute value
 - prec x => set precision to x bits
 -    clr => clear screen
+-   fact => factorial (strips fractional part and applies abs !!!)
