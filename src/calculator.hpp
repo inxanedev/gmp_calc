@@ -42,7 +42,19 @@ class Calculator {
                     break;
                 case command_parser::Operation::CLEAR:
                     std::cout << "\e[2J\e[0;0H";
-                    break; 
+                    break;
+                case command_parser::Operation::FACTORIAL:
+                    mpf_floor(value, value);
+                    mpf_abs(value, value);
+                    mpf_t counter;
+                    mpf_init(counter);
+                    mpf_set(counter, value);
+                    while (mpf_cmp_ui(counter, 1) != 0) {
+                        mpf_sub_ui(counter, counter, 1);
+                        mpf_mul(value, value, counter);
+                    }
+                    mpf_clear(counter);
+                    break;
             }
         }
         void print_value() {

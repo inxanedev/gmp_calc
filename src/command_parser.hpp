@@ -6,7 +6,7 @@
 
 namespace command_parser {
     enum Operation {
-        ADD, SUBTRACT, MULTIPLY, DIVIDE, POWER, PRECISION, ABS, CLEAR
+        ADD, SUBTRACT, MULTIPLY, DIVIDE, POWER, PRECISION, ABS, CLEAR, FACTORIAL
     };
     struct Command {
         bool success;
@@ -30,6 +30,7 @@ namespace command_parser {
         else if (current == "prec") result.operation = Operation::PRECISION;
         else if (current == "abs")  result.operation = Operation::ABS;
         else if (current == "clr")  result.operation = Operation::CLEAR;
+        else if (current == "fact")  result.operation = Operation::FACTORIAL;
         else result.success = false;
         ss >> result.argument;
         return result;
