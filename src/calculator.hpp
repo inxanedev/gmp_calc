@@ -68,6 +68,21 @@ class Calculator {
                 case command_parser::Operation::RESET:
                     mpf_set_str(value, "0", 10);
                     break;
+                case command_parser::Operation::HELP:
+                    std::cout << std::endl
+                              << "     help - displays help\n"
+                              << "  add <n> - adds n to the current value\n"
+                              << "  sub <n> - subtracts n from the current value\n"
+                              << "  mul <n> - multiplies current value by n\n"
+                              << "  div <n> - divide current value by n\n"
+                              << "  pow <n> - raise the current value to nth power\n"
+                              << "     sqrt - take square root of the current value\n"
+                              << "      clr - clear the screen\n"
+                              << "     fact - take factorial of the current value\n"
+                              << "    floor - round down to the nearest integer\n"
+                              << "     ceil - round up to the nearest integer\n"
+                              << std::endl;
+                    break;
             }
         }
         void print_value() {
