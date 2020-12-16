@@ -12,3 +12,6 @@ GMP based calculator made in C++ for linux
     - prec x => set precision to x bits
     -    clr => clear screen
     -   fact => factorial (strips fractional part and applies abs !!!)
+    -   sqrt => square root (applies abs!)
+    -   ceil => round up to integer
+    -  floor => round down to integer
