@@ -56,6 +56,7 @@ class Calculator {
                     mpf_clear(counter);
                     break;
 		case command_parser::Operation::SQRT:
+		    mpf_abs(value, value);
 		    mpf_sqrt(value, value);
 		    break;
 		case command_parser::Operation::FLOOR:
