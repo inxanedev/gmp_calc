@@ -55,6 +55,15 @@ class Calculator {
                     }
                     mpf_clear(counter);
                     break;
+		case command_parser::Operation::SQRT:
+		    mpf_sqrt(value, value);
+		    break;
+		case command_parser::Operation::FLOOR:
+		    mpf_floor(value, value);
+		    break;
+		case command_parser::Operation::CEIL:
+		    mpf_ceil(value, value);
+		    break;
             }
         }
         void print_value() {
