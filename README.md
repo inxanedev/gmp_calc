@@ -16,3 +16,4 @@ GMP based calculator made in C++ for linux
     -   ceil => round up to integer
     -  floor => round down to integer
     -  reset => reset to zero
+    -  help  => displays help
