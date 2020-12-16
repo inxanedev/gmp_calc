@@ -15,3 +15,4 @@ GMP based calculator made in C++ for linux
     -   sqrt => square root (applies abs!)
     -   ceil => round up to integer
     -  floor => round down to integer
+    -  reset => reset to zero
