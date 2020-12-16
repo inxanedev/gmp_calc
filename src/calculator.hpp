@@ -55,16 +55,19 @@ class Calculator {
                     }
                     mpf_clear(counter);
                     break;
-		case command_parser::Operation::SQRT:
-		    mpf_abs(value, value);
-		    mpf_sqrt(value, value);
-		    break;
-		case command_parser::Operation::FLOOR:
-		    mpf_floor(value, value);
-		    break;
-		case command_parser::Operation::CEIL:
-		    mpf_ceil(value, value);
-		    break;
+		        case command_parser::Operation::SQRT:
+		            mpf_abs(value, value);
+                    mpf_sqrt(value, value);
+                    break;
+                case command_parser::Operation::FLOOR:
+                    mpf_floor(value, value);
+                    break;
+                case command_parser::Operation::CEIL:
+                    mpf_ceil(value, value);
+                    break;
+                case command_parser::Operation::RESET:
+                    mpf_set_str(value, "0", 10);
+                    break;
             }
         }
         void print_value() {
